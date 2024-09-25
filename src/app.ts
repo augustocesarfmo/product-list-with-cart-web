@@ -11,13 +11,16 @@ import { Product } from "./entities/product";
 //   );
 // }
 
-const product1 = new Product(
-  data[0].name,
-  data[0].price,
-  data[0].category,
-  data[0].image.desktop
-);
+const banana = new Product("Banana", 10, "Fruta", "http://image.com");
 
+banana.incrementQuantity();
+banana.incrementQuantity();
+banana.incrementQuantity();
+console.log(banana);
+console.log(Cart.products);
+console.log(Cart.products.length);
+
+/*
 const product2 = new Product(
   data[1].name,
   data[1].price,
@@ -33,3 +36,4 @@ cart.addToCart(product1);
 console.log(cart.products);
 console.log(cart.products.length);
 console.log(cart.total);
+*/
