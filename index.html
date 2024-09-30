@@ -14,9 +14,9 @@
     <!-- Componente `List` -->
     <div class="flex flex-col ">
       <h1>Desserts</h1>
-      <ul class="flex flex-wrap space-x-6">
-        <li>
-          <!-- Componente `Product` -->
+      <ul id="product-list" class="flex flex-wrap space-x-6">
+        <!-- Componente `Product` -->
+        <!-- <li>
           <div class="flex flex-col h-[260px] w-[250px] border border-black">
             <div class="mb-6 relative h-full border border-red-600">
               <div class="button center text-xs">Add to Cart</div>
@@ -28,22 +28,7 @@
               <span class="product-price">$6.50</span>
             </div>
           </div>
-        </li>
-
-        <li>
-          <!-- Componente `Product` -->
-          <div class="flex flex-col h-[260px] w-[250px] border border-black">
-            <div class="mb-6 relative h-full border border-red-600">
-              <div class="button center text-xs">Add to Cart</div>
-            </div>
-
-            <div class="flex flex-col">
-              <span class="product-category">Fruta</span>
-              <span class="product-name">Banana</span>
-              <span class="product-price">$6.50</span>
-            </div>
-          </div>
-        </li>
+        </li> -->
       </ul>
     </div>
 
@@ -70,6 +55,8 @@
       </div>
     </div>
   </main>
+
+  <script type="module" src="./src/app.ts"></script>
 
 </body>
 

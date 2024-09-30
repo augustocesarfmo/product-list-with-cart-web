@@ -32,6 +32,7 @@ export class Cart {
 
     // Atualiza o valor total da compra
     this.calculateTotal();
+    console.log(JSON.parse(JSON.stringify(Cart._products)));
   }
 
   static get products() {

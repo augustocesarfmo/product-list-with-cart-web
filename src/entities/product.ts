@@ -17,6 +17,35 @@ export class Product {
     this._imageUrl = imageUrl;
   }
 
+  toHTML() {
+    const productListHTML = document.getElementById("product-list");
+
+    if (!productListHTML) return;
+
+    const productHTML = document.createElement("li");
+    productHTML.id = this._id;
+
+    productHTML.innerHTML = `
+        <div class="flex flex-col h-[260px] w-[250px] border border-black">
+          <div class="mb-6 relative h-full border border-red-600">
+            <div id="button-add-to-cart" class="button center text-xs">Add to Cart</div>
+          </div>
+
+          <div class="flex flex-col">
+            <span class="product-category">${this._category}</span>
+            <span class="product-name">${this._name}</span>
+            <span class="product-price">${this.price}</span>
+          </div>
+        </div>
+      `;
+
+    productHTML
+      .querySelector("#button-add-to-cart")
+      ?.addEventListener("click", () => this.incrementQuantity());
+
+    productListHTML.appendChild(productHTML);
+  }
+
   get id() {
     return this._id;
   }
@@ -26,6 +55,7 @@ export class Product {
   }
 
   incrementQuantity() {
+    console.log("entrou aqui");
     this._quantity += 1;
     this.updateTotal();
 
