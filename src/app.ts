@@ -12,13 +12,18 @@ import { Product } from "./entities/product";
 // }
 
 const banana = new Product("Banana", 10, "Fruta", "http://image.com");
+const uva = new Product("uva", 5, "Fruta", "http://image.com");
 
 banana.incrementQuantity();
 banana.incrementQuantity();
 banana.incrementQuantity();
-console.log(banana);
-console.log(Cart.products);
-console.log(Cart.products.length);
+uva.incrementQuantity();
+uva.incrementQuantity();
+// console.log(Cart.products);
+// console.log(Cart.products.length);
+console.log(Cart);
+Cart.removeProduct(banana);
+console.log(Cart);
 
 /*
 const product2 = new Product(
