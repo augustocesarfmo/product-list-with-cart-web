@@ -55,7 +55,6 @@ export class Product {
   }
 
   incrementQuantity() {
-    console.log("entrou aqui");
     this._quantity += 1;
     this.updateTotal();
 
@@ -65,6 +64,8 @@ export class Product {
   decrementQuantity() {
     this._quantity -= 1;
     this.updateTotal();
+
+    Cart.toHTML();
   }
 
   get total() {
