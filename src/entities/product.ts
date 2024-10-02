@@ -27,7 +27,7 @@ export class Product {
 
     productHTML.innerHTML = `
         <div class="flex flex-col h-[260px] w-[250px] border border-black">
-          <div class="mb-6 relative h-full border border-red-600">
+          <div class="mb-6 relative h-full bg-red-400 border border-red-600">
             <div id="button-add-to-cart" class="button center text-xs">Add to Cart</div>
           </div>
 
